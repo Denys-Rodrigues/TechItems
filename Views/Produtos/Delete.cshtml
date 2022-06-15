@@ -1,0 +1,30 @@
+﻿@model TechItems.Models.Produto
+
+@{
+	ViewData["Title"] = "Apagar Produto";
+}
+
+<h1>Apagar Produto</h1>
+
+<h3>Você tem certeza que deseja apagar esta produto?</h3>
+<div>
+	<h4>Produto</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Name)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Name)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Description)
+		</dt>
+	</dl>
+
+	<form asp-action="Delete">
+		<input type="hidden" asp-for="Id" />
+		<input type="submit" value="Apagar" class="btn btn-danger btn-sm" />
+		<a class="btn btn-secondary text-white btn-sm" asp-action="Index">Voltar</a>
+	</form>
+</div>
