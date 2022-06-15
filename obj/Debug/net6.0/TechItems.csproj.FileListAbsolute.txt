@@ -24,3 +24,7 @@ C:\Users\denys\Desktop\TechItems\obj\Debug\net6.0\refint\TechItems.dll
 C:\Users\denys\Desktop\TechItems\obj\Debug\net6.0\TechItems.pdb
 C:\Users\denys\Desktop\TechItems\obj\Debug\net6.0\TechItems.genruntimeconfig.cache
 C:\Users\denys\Desktop\TechItems\obj\Debug\net6.0\ref\TechItems.dll
+C:\Users\denys\Desktop\TechItems\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\denys\Desktop\TechItems\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\denys\Desktop\TechItems\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\denys\Desktop\TechItems\obj\Debug\net6.0\TechItems.csproj.CopyComplete
