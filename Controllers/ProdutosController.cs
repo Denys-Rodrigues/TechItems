@@ -20,6 +20,25 @@ namespace TechItems.Controllers
             return View(allTask);
         }
 
+        // GET: Produtos/Details
+        public async Task<IActionResult> Details(long? id) // O "?" é para ele aceitar os valores nulos, para não dar B.O no código
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _appCont.Produtos
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return View(produto);
+        }
+
         // GET: Produtos/Delete
         public async Task<IActionResult> Delete(long? id)
         {
@@ -30,6 +49,7 @@ namespace TechItems.Controllers
 
             var produto = await _appCont.Produtos
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (produto == null)
             {
                 return NotFound();
