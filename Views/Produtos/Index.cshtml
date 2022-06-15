@@ -1,0 +1,44 @@
+﻿@*IEnumerble serve para receber um conjunto de dados(Matrix) para podermos trabalhar essas dados.*@
+@model IEnumerable<TechItems.Models.Produto>
+
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<h1>Produtos</h1>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Adicionar Produto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@item.Id">
+                        Editar
+                    </a>
+                    <a class="btn btn-outline-info btn-sm" asp-action="Details" asp-route-id="@item.Id">
+                        Detalhes
+                    </a>
+                    <a class="btn btn-danger text-white btn-sm" asp-action="Delete" asp-route-id="@item.Id">
+                        Apagar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -21,7 +21,7 @@ namespace TechItems.Controllers
         }
 
         // GET: Produtos/Delete
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(long? id)
         {
             if (id == null)
             {
@@ -41,7 +41,7 @@ namespace TechItems.Controllers
         // POST: Produtos/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(long id)
         {
             var produto = await _appCont.Produtos.FindAsync(id);
             _appCont.Produtos.Remove(produto);

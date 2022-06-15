@@ -5,7 +5,7 @@ namespace TechItems.Models
     public class Produto
     {
         [Key]
-        public int Id { get; set; }
+        public long Id { get; set; }
         
         [Required]
         public string Name { get; set; }
