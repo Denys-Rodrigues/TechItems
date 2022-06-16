@@ -39,6 +39,12 @@ namespace TechItems.Controllers
             return View(produto);
         }
 
+        // GET: Produtos/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         // GET: Produtos/Delete
         public async Task<IActionResult> Delete(long? id)
         {
