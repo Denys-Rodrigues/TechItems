@@ -45,6 +45,20 @@ namespace TechItems.Controllers
             return View();
         }
 
+        // POST: Produtos/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Produto produto)
+        {
+            if (ModelState.IsValid)
+            {
+                _appCont.Add(produto);
+                await _appCont.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(produto);
+        }
+
         // GET: Produtos/Delete
         public async Task<IActionResult> Delete(long? id)
         {
